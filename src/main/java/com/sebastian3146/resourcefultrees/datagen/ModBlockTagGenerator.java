@@ -29,6 +29,7 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
         */
 
         //Adds coal_leaves to the mineable with hoe json file
+        /*
         this.tag(BlockTags.MINEABLE_WITH_HOE)
             .add(ModBlocks.COAL_LEAVES.get())
             .add(ModBlocks.IRON_LEAVES.get())
@@ -38,6 +39,7 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
             .add(ModBlocks.REDSTONE_LEAVES.get())
             .add(ModBlocks.COPPER_LEAVES.get())
             .add(ModBlocks.ANCIENT_DEBRIS_LEAVES.get());
+            */
     }
     
 }

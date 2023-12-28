@@ -23,12 +23,16 @@ public class ModItemModelProvider extends ItemModelProvider {
     protected void registerModels() {
         //generates a model item json file
         //simpleItem(ModItems.TEST_ITEM);
-
-        saplingItem(ModItems.ORE_SAPLING);
+        
+        //SAPLINGS
+        saplingItem(ModItems.COAL_SAPLING);
+        
+        //LEAVES
+        simpleItem(ModItems.COAL_LEAVES);
     }
 
     //Simple helper method
-    private ItemModelBuilder simpleItem(DeferredItem<Item> item) {
+    private ItemModelBuilder simpleItem(DeferredItem<BlockItem> item) {
         return withExistingParent(item.getId().getPath(),
             new ResourceLocation("item/generated")).texture("layer0",
             new ResourceLocation(ResourcefulTrees.MODID, "item/" + item.getId().getPath()));

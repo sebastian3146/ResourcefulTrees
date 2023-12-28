@@ -6,7 +6,12 @@
     "targets": [
       {
         "state": {
-          "Name": "resourcefultrees:coal_leaves"
+          "Name": "resourcefultrees:coal_leaves",
+          "Properties": {
+            "distance": "7",
+            "persistent": "false",
+            "waterlogged": "false"
+          }
         },
         "target": {
           "predicate_type": "minecraft:tag_match",
@@ -15,7 +20,12 @@
       },
       {
         "state": {
-          "Name": "resourcefultrees:coal_leaves"
+          "Name": "resourcefultrees:coal_leaves",
+          "Properties": {
+            "distance": "7",
+            "persistent": "false",
+            "waterlogged": "false"
+          }
         },
         "target": {
           "predicate_type": "minecraft:tag_match",

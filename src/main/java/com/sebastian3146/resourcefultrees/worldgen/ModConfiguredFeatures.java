@@ -31,7 +31,15 @@ public class ModConfiguredFeatures {
     public static final ResourceKey<ConfiguredFeature<?, ?>> NETHER_SAPPHIRE_ORE_KEY = registerKey("nether_sapphire_ore");
     public static final ResourceKey<ConfiguredFeature<?, ?>> END_SAPPHIRE_ORE_KEY = registerKey("end_sapphire_ore");
     //TREES
-    public static final ResourceKey<ConfiguredFeature<?, ?>> ORE_TREE_KEY = registerKey("end_sapphire_ore");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> COAL_TREE_KEY = registerKey("coal_tree");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> IRON_TREE_KEY = registerKey("iron_tree");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> GOLD_TREE_KEY = registerKey("gold_tree");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> DIAMOND_TREE_KEY = registerKey("diamond_tree");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> EMERALD_TREE_KEY = registerKey("emerald_tree");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> REDSTONE_TREE_KEY = registerKey("redstone_tree");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> COPPER_TREE_KEY = registerKey("copper_tree");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> ANCIENT_DEBRIS_TREE_KEY = registerKey("ancient_debris_tree");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> QUARTZ_TREE_KEY = registerKey("quartz_tree");
 
     public static void bootstrap(BootstapContext<ConfiguredFeature<?, ?>> context) {
         RuleTest stoneReplaceable = new TagMatchTest(BlockTags.STONE_ORE_REPLACEABLES);
@@ -47,10 +55,10 @@ public class ModConfiguredFeatures {
         //REGISTER ORES
         register(context, OVERWORLD_ORE_KEY, Feature.ORE, new OreConfiguration(overworldOreOres, 9));
 
-        //ORE TREE configuration, placement
-        register(context, ORE_TREE_KEY, Feature.TREE, new TreeConfiguration.TreeConfigurationBuilder(
+        //COAL TREE configuration, placement
+        register(context, COAL_TREE_KEY, Feature.TREE, new TreeConfiguration.TreeConfigurationBuilder(
             BlockStateProvider.simple(Blocks.OAK_LOG),
-            new StraightTrunkPlacer(5, 5, 5),
+            new StraightTrunkPlacer(3, 2, 2),
             BlockStateProvider.simple(ModBlocks.COAL_LEAVES.get()),
             new BlobFoliagePlacer(ConstantInt.of(3), ConstantInt.of(2), 3),
             new TwoLayersFeatureSize(1, 0, 2)).build());

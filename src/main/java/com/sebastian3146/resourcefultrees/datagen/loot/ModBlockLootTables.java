@@ -17,8 +17,8 @@ public class ModBlockLootTables extends BlockLootSubProvider {
     @Override
     protected void generate() {
         this.add(ModBlocks.COAL_LEAVES.get(), block ->
-            createLeavesDrops(block, ModBlocks.ORE_SAPLING.get(), NORMAL_LEAVES_SAPLING_CHANCES));
-        this.dropSelf(ModBlocks.ORE_SAPLING.get());
+            createLeavesDrops(block, ModBlocks.COAL_SAPLING.get(), NORMAL_LEAVES_SAPLING_CHANCES));
+        this.dropSelf(ModBlocks.COAL_SAPLING.get());
     }
     
     /*

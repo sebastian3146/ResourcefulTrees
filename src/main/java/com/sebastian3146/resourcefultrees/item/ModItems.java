@@ -4,19 +4,23 @@ import com.sebastian3146.resourcefultrees.ResourcefulTrees;
 import com.sebastian3146.resourcefultrees.block.ModBlocks;
 
 import net.minecraft.world.item.BlockItem;
-import net.minecraft.world.item.Item;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredRegister;
 
 public class ModItems {
     public static final DeferredRegister.Items ITEMS = DeferredRegister.createItems(ResourcefulTrees.MODID);
-        
-    //public static final DeferredItem<Item> TEST_ITEM = ITEMS.registerSimpleItem("test_item", new Item.Properties());
 
     //Block Items -> Saplings
-    public static final DeferredItem<BlockItem> ORE_SAPLING = ITEMS.registerSimpleBlockItem("ore_sapling", ModBlocks.ORE_SAPLING);
     public static final DeferredItem<BlockItem> COAL_SAPLING = ITEMS.registerSimpleBlockItem("coal_sapling", ModBlocks.COAL_SAPLING);
+    public static final DeferredItem<BlockItem> IRON_SAPLING = ITEMS.registerSimpleBlockItem("iron_sapling", ModBlocks.IRON_SAPLING);
+    public static final DeferredItem<BlockItem> GOLD_SAPLING = ITEMS.registerSimpleBlockItem("gold_sapling", ModBlocks.GOLD_SAPLING);
+    public static final DeferredItem<BlockItem> DIAMOND_SAPLING = ITEMS.registerSimpleBlockItem("diamond_sapling", ModBlocks.DIAMOND_SAPLING);
+    public static final DeferredItem<BlockItem> EMERALD_SAPLING = ITEMS.registerSimpleBlockItem("emerald_sapling", ModBlocks.EMERALD_SAPLING);
+    public static final DeferredItem<BlockItem> REDSTONE_SAPLING = ITEMS.registerSimpleBlockItem("redstone_sapling", ModBlocks.REDSTONE_SAPLING);
+    public static final DeferredItem<BlockItem> COPPER_SAPLING = ITEMS.registerSimpleBlockItem("copper_sapling", ModBlocks.COPPER_SAPLING);
+    public static final DeferredItem<BlockItem> ANCIENT_DEBRIS_SAPLING = ITEMS.registerSimpleBlockItem("ancient_debris_sapling", ModBlocks.ANCIENT_DEBRIS_SAPLING);
+    public static final DeferredItem<BlockItem> QUARTZ_SAPLING = ITEMS.registerSimpleBlockItem("quartz_sapling", ModBlocks.QUARTZ_SAPLING);
 
     //Block Items -> Leaves
     public static final DeferredItem<BlockItem> COAL_LEAVES = ITEMS.registerSimpleBlockItem("coal_leaves", ModBlocks.COAL_LEAVES);
