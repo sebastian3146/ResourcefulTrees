@@ -17,7 +17,7 @@
     "foliage_provider": {
       "type": "minecraft:simple_state_provider",
       "state": {
-        "Name": "resourcefultrees:coal_leaves",
+        "Name": "resourcefultrees:ancient_debris_leaves",
         "Properties": {
           "distance": "7",
           "persistent": "false",

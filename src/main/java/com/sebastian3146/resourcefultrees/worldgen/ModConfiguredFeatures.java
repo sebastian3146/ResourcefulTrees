@@ -2,6 +2,7 @@ package com.sebastian3146.resourcefultrees.worldgen;
 
 import java.util.List;
 
+import com.ibm.icu.impl.UResource.Array;
 import com.sebastian3146.resourcefultrees.ResourcefulTrees;
 import com.sebastian3146.resourcefultrees.block.ModBlocks;
 
@@ -41,11 +42,22 @@ public class ModConfiguredFeatures {
     public static final ResourceKey<ConfiguredFeature<?, ?>> ANCIENT_DEBRIS_TREE_KEY = registerKey("ancient_debris_tree");
     public static final ResourceKey<ConfiguredFeature<?, ?>> QUARTZ_TREE_KEY = registerKey("quartz_tree");
 
+    private static final int straightTrunkPlacer_1 = 3;
+    private static final int straightTrunkPlacer_2 = 2;
+    private static final int straightTrunkPlacer_3 = 2;
+
+    private static final int blobFoliagePlacer_1 = 3;
+    private static final int blobFoliagePlacer_2 = 2;
+    private static final int blobFoliagePlacer_3 = 3;
+
+
     public static void bootstrap(BootstapContext<ConfiguredFeature<?, ?>> context) {
+        
         RuleTest stoneReplaceable = new TagMatchTest(BlockTags.STONE_ORE_REPLACEABLES);
         RuleTest deepslateReplaceables = new TagMatchTest(BlockTags.DEEPSLATE_ORE_REPLACEABLES);
         RuleTest netherrackReplaceables = new BlockMatchTest(Blocks.NETHERRACK);
         RuleTest endReplaceable = new BlockMatchTest(Blocks.END_STONE);
+
 
         //ORE CONFIGURATIONS
         List<OreConfiguration.TargetBlockState> overworldOreOres = List.of(OreConfiguration.target(stoneReplaceable,
@@ -54,15 +66,74 @@ public class ModConfiguredFeatures {
         
         //REGISTER ORES
         register(context, OVERWORLD_ORE_KEY, Feature.ORE, new OreConfiguration(overworldOreOres, 9));
+        
 
-        //COAL TREE configuration, placement
+        //COAL TREE configuration, placement //create a list of tree_keys and ore_tree_leaves
         register(context, COAL_TREE_KEY, Feature.TREE, new TreeConfiguration.TreeConfigurationBuilder(
             BlockStateProvider.simple(Blocks.OAK_LOG),
-            new StraightTrunkPlacer(3, 2, 2),
+            new StraightTrunkPlacer(straightTrunkPlacer_1, straightTrunkPlacer_2, straightTrunkPlacer_3),
             BlockStateProvider.simple(ModBlocks.COAL_LEAVES.get()),
-            new BlobFoliagePlacer(ConstantInt.of(3), ConstantInt.of(2), 3),
+            new BlobFoliagePlacer(ConstantInt.of(blobFoliagePlacer_1), ConstantInt.of(blobFoliagePlacer_2), blobFoliagePlacer_3),
             new TwoLayersFeatureSize(1, 0, 2)).build());
-    }   
+        
+        register(context, IRON_TREE_KEY, Feature.TREE, new TreeConfiguration.TreeConfigurationBuilder(
+            BlockStateProvider.simple(Blocks.OAK_LOG),
+            new StraightTrunkPlacer(straightTrunkPlacer_1, straightTrunkPlacer_2, straightTrunkPlacer_3),
+            BlockStateProvider.simple(ModBlocks.IRON_LEAVES.get()),
+            new BlobFoliagePlacer(ConstantInt.of(blobFoliagePlacer_1), ConstantInt.of(blobFoliagePlacer_2), blobFoliagePlacer_3),
+            new TwoLayersFeatureSize(1, 0, 2)).build());
+
+        register(context, GOLD_TREE_KEY, Feature.TREE, new TreeConfiguration.TreeConfigurationBuilder(
+            BlockStateProvider.simple(Blocks.OAK_LOG),
+            new StraightTrunkPlacer(straightTrunkPlacer_1, straightTrunkPlacer_2, straightTrunkPlacer_3),
+            BlockStateProvider.simple(ModBlocks.GOLD_LEAVES.get()),
+            new BlobFoliagePlacer(ConstantInt.of(blobFoliagePlacer_1), ConstantInt.of(blobFoliagePlacer_2), blobFoliagePlacer_3),
+            new TwoLayersFeatureSize(1, 0, 2)).build());
+
+        register(context, DIAMOND_TREE_KEY, Feature.TREE, new TreeConfiguration.TreeConfigurationBuilder(
+            BlockStateProvider.simple(Blocks.OAK_LOG),
+            new StraightTrunkPlacer(straightTrunkPlacer_1, straightTrunkPlacer_2, straightTrunkPlacer_3),
+            BlockStateProvider.simple(ModBlocks.DIAMOND_LEAVES.get()),
+            new BlobFoliagePlacer(ConstantInt.of(blobFoliagePlacer_1), ConstantInt.of(blobFoliagePlacer_2), blobFoliagePlacer_3),
+            new TwoLayersFeatureSize(1, 0, 2)).build());
+
+        register(context, EMERALD_TREE_KEY, Feature.TREE, new TreeConfiguration.TreeConfigurationBuilder(
+            BlockStateProvider.simple(Blocks.OAK_LOG),
+            new StraightTrunkPlacer(straightTrunkPlacer_1, straightTrunkPlacer_2, straightTrunkPlacer_3),
+            BlockStateProvider.simple(ModBlocks.EMERALD_LEAVES.get()),
+            new BlobFoliagePlacer(ConstantInt.of(blobFoliagePlacer_1), ConstantInt.of(blobFoliagePlacer_2), blobFoliagePlacer_3),
+            new TwoLayersFeatureSize(1, 0, 2)).build());
+
+        register(context, REDSTONE_TREE_KEY, Feature.TREE, new TreeConfiguration.TreeConfigurationBuilder(
+            BlockStateProvider.simple(Blocks.OAK_LOG),
+            new StraightTrunkPlacer(straightTrunkPlacer_1, straightTrunkPlacer_2, straightTrunkPlacer_3),
+            BlockStateProvider.simple(ModBlocks.REDSTONE_LEAVES.get()),
+            new BlobFoliagePlacer(ConstantInt.of(blobFoliagePlacer_1), ConstantInt.of(blobFoliagePlacer_2), blobFoliagePlacer_3),
+            new TwoLayersFeatureSize(1, 0, 2)).build());
+
+        register(context, COPPER_TREE_KEY, Feature.TREE, new TreeConfiguration.TreeConfigurationBuilder(
+            BlockStateProvider.simple(Blocks.OAK_LOG),
+            new StraightTrunkPlacer(straightTrunkPlacer_1, straightTrunkPlacer_2, straightTrunkPlacer_3),
+            BlockStateProvider.simple(ModBlocks.COPPER_LEAVES.get()),
+            new BlobFoliagePlacer(ConstantInt.of(blobFoliagePlacer_1), ConstantInt.of(blobFoliagePlacer_2), blobFoliagePlacer_3),
+            new TwoLayersFeatureSize(1, 0, 2)).build());
+
+        register(context, ANCIENT_DEBRIS_TREE_KEY, Feature.TREE, new TreeConfiguration.TreeConfigurationBuilder(
+            BlockStateProvider.simple(Blocks.OAK_LOG),
+            new StraightTrunkPlacer(straightTrunkPlacer_1, straightTrunkPlacer_2, straightTrunkPlacer_3),
+            BlockStateProvider.simple(ModBlocks.ANCIENT_DEBRIS_LEAVES.get()),
+            new BlobFoliagePlacer(ConstantInt.of(blobFoliagePlacer_1), ConstantInt.of(blobFoliagePlacer_2), blobFoliagePlacer_3),
+            new TwoLayersFeatureSize(1, 0, 2)).build());
+
+        register(context, QUARTZ_TREE_KEY, Feature.TREE, new TreeConfiguration.TreeConfigurationBuilder(
+            BlockStateProvider.simple(Blocks.OAK_LOG),
+            new StraightTrunkPlacer(straightTrunkPlacer_1, straightTrunkPlacer_2, straightTrunkPlacer_3),
+            BlockStateProvider.simple(ModBlocks.QUARTZ_LEAVES.get()),
+            new BlobFoliagePlacer(ConstantInt.of(blobFoliagePlacer_1), ConstantInt.of(blobFoliagePlacer_2), blobFoliagePlacer_3),
+            new TwoLayersFeatureSize(1, 0, 2)).build());
+    }
+
+    List<ResourceKey<ConfiguredFeature<?, ?>>> ore_keys = List.of(registerKey("coal_tree"), registerKey("iron_tree"));
 
     //HELPER METHODS
     public static ResourceKey<ConfiguredFeature<?, ?>> registerKey(String name) {

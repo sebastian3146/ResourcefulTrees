@@ -40,6 +40,7 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
             .add(ModBlocks.COPPER_LEAVES.get())
             .add(ModBlocks.ANCIENT_DEBRIS_LEAVES.get());
             */
+
     }
     
 }
