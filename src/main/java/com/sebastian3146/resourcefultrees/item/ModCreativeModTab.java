@@ -19,8 +19,25 @@ public class ModCreativeModTab {
         .title(Component.translatable("creativetab.resourcefultrees_tab"))
         .displayItems((parameters, output)-> {
             //Add items to the creative tab
-            //output.accept(ModItems.SAPLING.get());
             output.accept(ModBlocks.COAL_SAPLING.get());
+            output.accept(ModBlocks.ANCIENT_DEBRIS_SAPLING.get());
+            output.accept(ModBlocks.COPPER_SAPLING.get());
+            output.accept(ModBlocks.DIAMOND_SAPLING.get());
+            output.accept(ModBlocks.EMERALD_SAPLING.get());
+            output.accept(ModBlocks.GOLD_SAPLING.get());
+            output.accept(ModBlocks.IRON_SAPLING.get());
+            output.accept(ModBlocks.QUARTZ_SAPLING.get());
+            output.accept(ModBlocks.REDSTONE_SAPLING.get());
+
+            output.accept(ModBlocks.ANCIENT_DEBRIS_LEAVES);
+            output.accept(ModBlocks.COAL_LEAVES.get());
+            output.accept(ModBlocks.COPPER_LEAVES.get());
+            output.accept(ModBlocks.DIAMOND_LEAVES.get());
+            output.accept(ModBlocks.EMERALD_LEAVES.get());
+            output.accept(ModBlocks.GOLD_LEAVES.get());
+            output.accept(ModBlocks.IRON_LEAVES.get());
+            output.accept(ModBlocks.QUARTZ_LEAVES.get());
+            output.accept(ModBlocks.REDSTONE_LEAVES.get());
         })
         .build());
 
