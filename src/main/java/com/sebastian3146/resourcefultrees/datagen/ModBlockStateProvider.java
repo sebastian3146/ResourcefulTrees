@@ -14,14 +14,12 @@ import net.neoforged.neoforge.common.data.ExistingFileHelper;
 import net.neoforged.neoforge.registries.DeferredBlock;
 
 public class ModBlockStateProvider extends BlockStateProvider {
-
     public ModBlockStateProvider(PackOutput output, ExistingFileHelper exFileHelper) {
         super(output, ResourcefulTrees.MODID, exFileHelper);
     }
 
     @Override
     protected void registerStatesAndModels() {
-        
         //LEAVES
         /*
         leavesBlock(ModBlocks.COAL_LEAVES);
@@ -44,9 +42,6 @@ public class ModBlockStateProvider extends BlockStateProvider {
         saplingBlock(ModBlocks.COPPER_SAPLING);
         saplingBlock(ModBlocks.ANCIENT_DEBRIS_SAPLING);
         saplingBlock(ModBlocks.QUARTZ_SAPLING);
-
-        
-
     }
 
     //Helper Methods

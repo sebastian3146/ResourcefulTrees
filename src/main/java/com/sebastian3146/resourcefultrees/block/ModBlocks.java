@@ -1,5 +1,7 @@
 package com.sebastian3146.resourcefultrees.block;
 
+import javax.annotation.Nullable;
+
 import com.sebastian3146.resourcefultrees.ResourcefulTrees;
 import com.sebastian3146.resourcefultrees.worldgen.tree.*;
 
@@ -35,7 +37,6 @@ public class ModBlocks {
     public static final DeferredBlock<LeavesBlock> ANCIENT_DEBRIS_LEAVES = BLOCKS.register("ancient_debris_leaves", ()-> new LeavesBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES)));
     public static final DeferredBlock<LeavesBlock> QUARTZ_LEAVES = BLOCKS.register("quartz_leaves", ()-> new LeavesBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES)));
 
-
-    public static void register(IEventBus eventBus) { BLOCKS.register(eventBus); }
+    public static void register(IEventBus  eventBus) { BLOCKS.register(eventBus); }
 }
         

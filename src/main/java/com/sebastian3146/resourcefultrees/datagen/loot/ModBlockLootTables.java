@@ -53,6 +53,7 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         this.dropSelf(ModBlocks.QUARTZ_SAPLING.get());
     }
     
+    
     // In some BlockLootSubProvider subclass for some DeferredRegister BLOCK_REGISTRAR(= ModBlocks.BLOCKS)
     @Override
     protected Iterable<Block> getKnownBlocks() {
@@ -61,5 +62,6 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         .map(s->(Block)s.get()) // Get the object if available
         .toList();
     }
+    
     
 }

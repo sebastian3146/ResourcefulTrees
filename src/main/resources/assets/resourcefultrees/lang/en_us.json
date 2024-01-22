@@ -1,6 +1,24 @@
 {
     "//comment": "items",
+    "block.resourcefultrees.coal_sapling": "Coal Sapling",
+    "block.resourcefultrees.iron_sapling": "Iron Sapling",
+    "block.resourcefultrees.gold_sapling": "Gold Sapling",
+    "block.resourcefultrees.diamond_sapling": "Diamond Sapling",
+    "block.resourcefultrees.emerald_sapling": "Emerald Sapling",
+    "block.resourcefultrees.redstone_sapling": "Redstone Sapling",
+    "block.resourcefultrees.copper_sapling": "Copper Sapling",
+    "block.resourcefultrees.ancient_debris_sapling": "Ancient Debris Sapling",
+    "block.resourcefultrees.quartz_sapling": "Quartz Sapling",
 
+    "block.resourcefultrees.coal_leaves": "Coal Leaves",
+    "block.resourcefultrees.iron_leaves": "Iron Leaves",
+    "block.resourcefultrees.gold_leaves": "Gold Leaves",
+    "block.resourcefultrees.diamond_leaves": "Diamond Leaves",
+    "block.resourcefultrees.emerald_leaves": "Emerald Leaves",
+    "block.resourcefultrees.redstone_leaves": "Coal Leaves",
+    "block.resourcefultrees.copper_leaves": "Copper Leaves",
+    "block.resourcefultrees.ancient_debris_leaves": "Ancient Debris Leaves",
+    "block.resourcefultrees.quartz_leaves": "Quartz Leaves",
 
     "//comment": "creative tab",
     "creativetab.resourcefultrees_tab": "Resourceful Trees"

@@ -33,8 +33,5 @@ public class DataGenerators {
 
 
         generator.addProvider(event.includeServer(), new ModWorldGenProvider(packOutput, lookupProvider, null, null));
-    }
-    
+    }   
 }
-
-//For Backup: delete -> data folder, models folder, blockstate folder

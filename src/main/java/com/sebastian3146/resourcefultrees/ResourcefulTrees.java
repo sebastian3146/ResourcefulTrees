@@ -1,6 +1,5 @@
 package com.sebastian3146.resourcefultrees;
 
-import com.mojang.logging.LogUtils;
 import com.sebastian3146.resourcefultrees.block.ModBlocks;
 import com.sebastian3146.resourcefultrees.item.ModCreativeModTab;
 import com.sebastian3146.resourcefultrees.item.ModItems;
@@ -14,7 +13,6 @@ import net.neoforged.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.neoforged.neoforge.common.NeoForge;
 import net.neoforged.neoforge.event.BuildCreativeModeTabContentsEvent;
 import net.neoforged.neoforge.event.server.ServerStartingEvent;
-import org.slf4j.Logger;
 
 // The value here should match an entry in the META-INF/mods.toml file
 @Mod(ResourcefulTrees.MODID)
@@ -23,7 +21,7 @@ public class ResourcefulTrees
     // Define mod id in a common place for everything to reference
     public static final String MODID = "resourcefultrees";
     // Directly reference a slf4j logger
-    private static final Logger LOGGER = LogUtils.getLogger();
+    //private static final Logger LOGGER = LogUtils.getLogger();
 
 
     // The constructor for the mod class is the first code that is run when your mod is loaded.
