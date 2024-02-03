@@ -1,5 +1,8 @@
 package com.sebastian3146.resourcefultrees;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import com.sebastian3146.resourcefultrees.block.ModBlocks;
 import com.sebastian3146.resourcefultrees.item.ModCreativeModTab;
 import com.sebastian3146.resourcefultrees.item.ModItems;
@@ -16,50 +19,50 @@ import net.neoforged.neoforge.event.server.ServerStartingEvent;
 
 // The value here should match an entry in the META-INF/mods.toml file
 @Mod(ResourcefulTrees.MODID)
-public class ResourcefulTrees
-{
-    // Define mod id in a common place for everything to reference
-    public static final String MODID = "resourcefultrees";
-    // Directly reference a slf4j logger
-    //private static final Logger LOGGER = LogUtils.getLogger();
+public class ResourcefulTrees {
+  // Define mod id in a common place for everything to reference
+  public static final String MODID = "resourcefultrees";
+  // Directly reference a slf4j logger
+  // private static final Logger LOGGER = LogUtils.getLogger();
 
+  // The constructor for the mod class is the first code that is run when your mod
+  // is loaded.
+  // FML will recognize some parameter types like IEventBus or ModContainer and
+  // pass them in automatically.
+  public ResourcefulTrees(IEventBus modEventBus) {
+    // Register the commonSetup method for modloading
+    modEventBus.addListener(this::commonSetup);
 
-    // The constructor for the mod class is the first code that is run when your mod is loaded.
-    // FML will recognize some parameter types like IEventBus or ModContainer and pass them in automatically.
-    public ResourcefulTrees(IEventBus modEventBus)
-    {
-        // Register the commonSetup method for modloading
-        modEventBus.addListener(this::commonSetup);
+    ModItems.register(modEventBus);
+    ModBlocks.register(modEventBus);
 
-        ModItems.register(modEventBus);
-        ModBlocks.register(modEventBus);
+    ModCreativeModTab.register(modEventBus);
 
-        ModCreativeModTab.register(modEventBus);
+    // Register ourselves for server and other game events we are interested in
+    NeoForge.EVENT_BUS.register(this);
 
-        // Register ourselves for server and other game events we are interested in
-        NeoForge.EVENT_BUS.register(this);
+    // Register the item to a creative tab
+    modEventBus.addListener(this::addCreative);
+  }
 
-        // Register the item to a creative tab
-        modEventBus.addListener(this::addCreative);
-    }
+  private void commonSetup(final FMLCommonSetupEvent event) {
+  }
 
-    private void commonSetup(final FMLCommonSetupEvent event) {
-    }
+  // Add a Item or Block to a Creative Tab
+  private void addCreative(BuildCreativeModeTabContentsEvent event) {
+  }
 
-    // Add a Item or Block to a Creative Tab
-    private void addCreative(BuildCreativeModeTabContentsEvent event) {
-    }
+  // You can use SubscribeEvent and let the Event Bus discover methods to call
+  @SubscribeEvent
+  public void onServerStarting(ServerStartingEvent event) {
+  }
 
-    // You can use SubscribeEvent and let the Event Bus discover methods to call
+  // You can use EventBusSubscriber to automatically register all static methods
+  // in the class annotated with @SubscribeEvent
+  @Mod.EventBusSubscriber(modid = MODID, bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
+  public static class ClientModEvents {
     @SubscribeEvent
-    public void onServerStarting(ServerStartingEvent event) {
+    public static void onClientSetup(FMLClientSetupEvent event) {
     }
-
-    // You can use EventBusSubscriber to automatically register all static methods in the class annotated with @SubscribeEvent
-    @Mod.EventBusSubscriber(modid = MODID, bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
-    public static class ClientModEvents {
-        @SubscribeEvent
-        public static void onClientSetup(FMLClientSetupEvent event) {
-        }
-    }
+  }
 }

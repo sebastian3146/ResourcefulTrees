@@ -30,6 +30,5 @@
     "recipes": [
       "resourcefultrees:ancient_debris_sapling"
     ]
-  },
-  "sends_telemetry_event": false
+  }
 }

@@ -30,6 +30,5 @@
     "recipes": [
       "resourcefultrees:quartz_sapling"
     ]
-  },
-  "sends_telemetry_event": false
+  }
 }

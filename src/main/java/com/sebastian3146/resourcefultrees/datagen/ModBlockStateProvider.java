@@ -21,17 +21,17 @@ public class ModBlockStateProvider extends BlockStateProvider {
     @Override
     protected void registerStatesAndModels() {
         //LEAVES
-        /*
-        leavesBlock(ModBlocks.COAL_LEAVES);
-        leavesBlock(ModBlocks.IRON_LEAVES);
-        leavesBlock(ModBlocks.GOLD_LEAVES);
+        
+        //leavesBlock(ModBlocks.COAL_LEAVES);
+        //leavesBlock(ModBlocks.IRON_LEAVES);
+        //leavesBlock(ModBlocks.GOLD_LEAVES);
         leavesBlock(ModBlocks.DIAMOND_LEAVES);
-        leavesBlock(ModBlocks.EMERALD_LEAVES);
-        leavesBlock(ModBlocks.REDSTONE_LEAVES);
-        leavesBlock(ModBlocks.COPPER_LEAVES);
-        leavesBlock(ModBlocks.ANCIENT_DEBRIS_LEAVES);
-        leavesBlock(ModBlocks.QUARTZ_LEAVES);
-        */
+        //leavesBlock(ModBlocks.EMERALD_LEAVES);
+        //leavesBlock(ModBlocks.REDSTONE_LEAVES);
+        //leavesBlock(ModBlocks.COPPER_LEAVES);
+        //leavesBlock(ModBlocks.ANCIENT_DEBRIS_LEAVES);
+        //leavesBlock(ModBlocks.QUARTZ_LEAVES);
+        
         //SAPLINGS
         saplingBlock(ModBlocks.COAL_SAPLING);
         saplingBlock(ModBlocks.IRON_SAPLING);

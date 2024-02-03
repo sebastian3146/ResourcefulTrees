@@ -30,6 +30,5 @@
     "recipes": [
       "resourcefultrees:copper_sapling"
     ]
-  },
-  "sends_telemetry_event": false
+  }
 }

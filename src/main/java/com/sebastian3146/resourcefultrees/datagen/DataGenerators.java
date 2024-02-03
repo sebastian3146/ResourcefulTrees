@@ -7,6 +7,7 @@ import com.sebastian3146.resourcefultrees.ResourcefulTrees;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.PackOutput;
+import net.minecraft.data.DataGenerator.PackGenerator;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.Mod;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
@@ -20,6 +21,8 @@ public class DataGenerators {
         PackOutput packOutput = generator.getPackOutput();
         ExistingFileHelper existingFileHelper = event.getExistingFileHelper();
         CompletableFuture<HolderLookup.Provider> lookupProvider = event.getLookupProvider();
+
+        PackGenerator vanillaPack = generator.getVanillaPack(true);
 
         generator.addProvider(event.includeServer(), new ModRecipeProvider(packOutput, lookupProvider)); //recipes generation
         generator.addProvider(event.includeServer(), ModLootTableProvider.create(packOutput));          //loot table generation

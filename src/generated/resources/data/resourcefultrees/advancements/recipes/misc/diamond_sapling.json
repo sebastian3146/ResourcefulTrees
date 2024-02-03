@@ -30,6 +30,5 @@
     "recipes": [
       "resourcefultrees:diamond_sapling"
     ]
-  },
-  "sends_telemetry_event": false
+  }
 }

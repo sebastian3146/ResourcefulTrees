@@ -2,9 +2,11 @@ package com.sebastian3146.resourcefultrees.datagen;
 
 import java.util.concurrent.CompletableFuture;
 
+import com.sebastian3146.resourcefultrees.ResourcefulTrees;
 import com.sebastian3146.resourcefultrees.block.ModBlocks;
 import com.sebastian3146.resourcefultrees.item.ModItems;
 
+import net.minecraft.core.HolderLookup;
 import net.minecraft.core.HolderLookup.Provider;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.RecipeCategory;
@@ -17,8 +19,8 @@ import net.minecraft.world.level.block.Blocks;
 import net.neoforged.neoforge.common.conditions.IConditionBuilder;
 
 public class ModRecipeProvider extends RecipeProvider implements IConditionBuilder{
-    public ModRecipeProvider(PackOutput p_248933_, CompletableFuture<Provider> lookupProvider) {
-        super(p_248933_, lookupProvider);
+    public ModRecipeProvider(PackOutput packOutput, CompletableFuture<HolderLookup.Provider> lookupProvider) {
+        super(packOutput, lookupProvider);
     }
 
     @Override

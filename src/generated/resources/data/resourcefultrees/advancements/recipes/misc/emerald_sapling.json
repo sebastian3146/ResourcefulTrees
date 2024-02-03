@@ -30,6 +30,5 @@
     "recipes": [
       "resourcefultrees:emerald_sapling"
     ]
-  },
-  "sends_telemetry_event": false
+  }
 }
