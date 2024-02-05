@@ -40,14 +40,14 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleBlockItem(ModItems.COAL_LEAVES);
         simpleBlockItem(ModItems.IRON_LEAVES);
         simpleBlockItem(ModItems.GOLD_LEAVES);
-        
+        simpleBlockItem(ModItems.DIAMOND_LEAVES);
         simpleBlockItem(ModItems.EMERALD_LEAVES);
         simpleBlockItem(ModItems.REDSTONE_LEAVES);
         simpleBlockItem(ModItems.COPPER_LEAVES);
         simpleBlockItem(ModItems.ANCIENT_DEBRIS_LEAVES);
         simpleBlockItem(ModItems.QUARTZ_LEAVES);
         */
-        simpleBlockItem(ModItems.DIAMOND_LEAVES);
+        
     }
 
     //Simple helper method

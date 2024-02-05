@@ -37,7 +37,7 @@
                   ]
                 }
               ],
-              "name": "resourcefultrees:copper_leaves"
+              "name": "minecraft:air"
             },
             {
               "type": "minecraft:item",

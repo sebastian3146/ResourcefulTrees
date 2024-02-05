@@ -17,7 +17,7 @@ public class ModBlocks {
     public static final DeferredRegister.Blocks BLOCKS = DeferredRegister.createBlocks(ResourcefulTrees.MODID);
 
     //Saplings
-    public static final DeferredBlock<SaplingBlock> COAL_SAPLING = BLOCKS.register("coal_sapling", ()-> new SaplingBlock(CoalTreeGrower.Coal, BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_SAPLING)));
+	public static final DeferredBlock<SaplingBlock> COAL_SAPLING = BLOCKS.register("coal_sapling", ()-> new SaplingBlock(CoalTreeGrower.Coal, BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_SAPLING)));
     public static final DeferredBlock<SaplingBlock> IRON_SAPLING = BLOCKS.register("iron_sapling", ()-> new SaplingBlock(IronTreeGrower.iron, BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_SAPLING)));
     public static final DeferredBlock<SaplingBlock> GOLD_SAPLING = BLOCKS.register("gold_sapling", ()-> new SaplingBlock(GoldTreeGrower.gold, BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_SAPLING)));
     public static final DeferredBlock<SaplingBlock> DIAMOND_SAPLING = BLOCKS.register("diamond_sapling", ()-> new SaplingBlock(DiamondTreeGrower.diamond, BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_SAPLING)));
